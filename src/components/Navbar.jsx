@@ -136,6 +136,13 @@ export default function Navbar() {
                     <Icon className="w-5 h-5" />
                   </a>
                 ))}
+                              <a
+                target='_blank'
+                href='https://www.tiktok.com/@unboxliquidationsatx'
+                className="bg-light p-1 text-dark rounded-full hover:text-primary transition-colors"
+              >
+                <img src="https://cliply.co/wp-content/uploads/2021/02/372102780_TIKTOK_ICON_1080.png" width={30} height={30} alt="" />
+              </a>
               </div>
             </motion.div>
           )}
