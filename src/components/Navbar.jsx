@@ -1,34 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Home, Menu, X, Facebook, Twitter, Instagram, Linkedin as LinkedIn } from 'lucide-react';
+import { Menu} from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-
-const TikTokIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    className="w-5 h-5"
-  >
-    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10V6h-2v6c0 3.31-2.69 6-6 6s-6-2.69-6-6 2.69-6 6-6V2z" />
-  </svg>
-);
 
 
 export default function Navbar() {
-
-  const socialLinks = [
-    { icon: Facebook, href: "https://www.facebook.com/people/UnBox-Liquidation-San-Antonio-TX/61564372450843/" },
-    // { icon: Twitter, href: "#" },
-    { icon: Instagram, href: "https://www.instagram.com/unboxliquidation/" },
-
-    // { icon: LinkedIn, href: "#" }
-  ];
-
-  const links = {
-    Company: ['About Us', 'Our Warehouse', 'Wholesale Deals', 'Testimonials'],
-    Categories: ['Electronics', 'Home Goods', 'Apparel', 'Tools & Hardware'],
-    Support: ['Contact Us', 'FAQ', 'Shipping & Returns', 'Privacy Policy']
-  };
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -51,9 +26,6 @@ export default function Navbar() {
 
   return (
     <>
-
-
-      {/* Navigation Bar */}
       <nav className={`fixed w-full z-50 transition-all bg-white duration-300 ${isScrolled ? 'py-4 bg-white/95 backdrop-blur-sm shadow-lg' : 'py-6 bg-transparent'}`}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between">
@@ -78,23 +50,31 @@ export default function Navbar() {
                   {link.label}
                 </motion.a>
               ))}
-              {socialLinks.map(({ icon: Icon, href }) => (
-                <a
-                  target='_blank'
-                  key={href}
-                  href={href}
-                  className="bg-light p-1 text-dark rounded-full hover:text-primary transition-colors"
-                >
-                  <Icon className="w-5 h-5" />
-                </a>
-              ))}
+
 
               <a
                 target='_blank'
+                rel='noopener noreferrer'
+                href='https://www.facebook.com/people/UnBox-Liquidation-San-Antonio-TX/61564372450843/'
+                className="bg-light p-1 text-dark rounded-full hover:text-primary transition-colors"
+              >
+                <i className="fab fa-facebook"></i>
+              </a>
+              <a
+                target='_blank'
+                rel='noopener noreferrer'
+                href='https://www.instagram.com/unboxliquidation/'
+                className="bg-light p-1 text-dark rounded-full hover:text-primary transition-colors"
+              >
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a
+                target='_blank'
+                rel='noopener noreferrer'
                 href='https://www.tiktok.com/@unboxliquidationsatx'
                 className="bg-light p-1 text-dark rounded-full hover:text-primary transition-colors"
               >
-                <img src="https://cliply.co/wp-content/uploads/2021/02/372102780_TIKTOK_ICON_1080.png" width={30} height={30} alt="" />
+                <i className="fab fa-tiktok"></i>
               </a>
             </div>
 
@@ -126,16 +106,30 @@ export default function Navbar() {
                     {link.label}
                   </a>
                 ))}
-                {socialLinks.map(({ icon: Icon, href }) => (
-                  <a
-                    target='_blank'
-                    key={href}
-                    href={href}
-                    className="bg-light p-1 text-dark rounded-full hover:text-primary transition-colors"
-                  >
-                    <Icon className="w-5 h-5" />
-                  </a>
-                ))}
+                <a
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  href='https://www.facebook.com/people/UnBox-Liquidation-San-Antonio-TX/61564372450843/'
+                  className="bg-light p-1 text-dark rounded-full hover:text-primary transition-colors"
+                >
+                  <i className="fab fa-facebook"></i>
+                </a>
+                <a
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  href='https://www.instagram.com/unboxliquidation/'
+                  className="bg-light p-1 mx-3 text-dark rounded-full hover:text-primary transition-colors"
+                >
+                  <i className="fab fa-instagram"></i>
+                </a>
+                <a
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  href='https://www.tiktok.com/@unboxliquidationsatx'
+                  className="bg-light p-1 text-dark rounded-full hover:text-primary transition-colors"
+                >
+                  <i className="fab fa-tiktok"></i>
+                </a>
               </div>
             </motion.div>
           )}

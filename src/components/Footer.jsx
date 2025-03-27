@@ -27,23 +27,26 @@ export default function Footer() {
               Get the best wholesale deals today!
             </p>
             <div className="flex space-x-4">
-              {socialLinks.map(({ icon: Icon, href }) => (
-                <a
-                  target='_blank'
-                  key={href}
-                  href={href}
-                  className="bg-accent-light p-2 rounded-full w-12 h-12 flex items-center justify-center hover:bg-primary transition-colors"
-                >
-                  <Icon className="w-5 h-5" />
-                </a>
-              ))}
               <a
                 target='_blank'
-                href='https://www.tiktok.com/@unboxliquidationsatx'
-                className="bg-accent-light p-2 rounded-full hover:bg-primary transition-colors"
+                href="https://www.facebook.com/people/UnBox-Liquidation-San-Antonio-TX/61564372450843/"
+                className="bg-accent-light p-2 rounded-full w-12 h-12 flex items-center justify-center hover:bg-primary transition-colors"
               >
-                <img src="https://cliply.co/wp-content/uploads/2021/02/372102780_TIKTOK_ICON_1080.png" width={30} height={30} alt="" />
-
+                <i className="fab fa-facebook"></i>
+              </a>
+              <a
+                target='_blank'
+                href="https://www.instagram.com/unboxliquidation/"
+                className="bg-accent-light p-2 rounded-full w-12 h-12 flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a
+                target='_blank'
+                href="https://www.tiktok.com/@unboxliquidationsatx"
+                className="bg-accent-light p-2 rounded-full w-12 h-12 flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i className="fab fa-tiktok"></i>
               </a>
             </div>
           </div>
