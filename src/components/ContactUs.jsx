@@ -45,7 +45,7 @@ export default function ContactUs() {
             <p className="text-accent/80 mb-8 text-lg">
               Have questions or need help selecting the right pallet? Contact us today and start maximizing your profits!
             </p>
-
+  
             <div className="space-y-6 mb-8">
               <div className="flex items-center space-x-4">
                 <div className="bg-primary/10 p-3 rounded-full">
@@ -53,24 +53,20 @@ export default function ContactUs() {
                 </div>
                 <div>
                   <div className="font-medium text-accent">Phone</div>
-                  <a href="tel:+17262107616" className="text-accent/80 hover:underline">
-                    +1 726-210-7616
-                  </a>
+                  <div className="text-accent/80">+1 726-210-7616</div>
                 </div>
               </div>
-
+  
               <div className="flex items-center space-x-4">
                 <div className="bg-primary/10 p-3 rounded-full">
                   <Mail className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <div className="font-medium text-accent">Email</div>
-                  <a href="mailto:unboxliquidation@gmail.com" className="text-accent/80 hover:underline">
-                    unboxliquidation@gmail.com
-                  </a>
+                  <div className="text-accent/80">unboxliquidation@gmail.com</div>
                 </div>
               </div>
-
+  
               <div className="flex items-center space-x-4">
                 <div className="bg-primary/10 p-3 rounded-full">
                   <MapPin className="w-6 h-6 text-primary" />
@@ -84,7 +80,7 @@ export default function ContactUs() {
               </div>
             </div>
           </motion.div>
-
+  
           {/* Right Side - Contact Form */}
           <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="bg-white rounded-2xl shadow-xl p-8">
             <form className="space-y-6" onSubmit={handleSubmit}>
@@ -112,7 +108,7 @@ export default function ContactUs() {
                   />
                 </div>
               </div>
-
+  
               <div>
                 <label className="block text-sm font-medium text-accent mb-2">Email</label>
                 <input
@@ -124,7 +120,7 @@ export default function ContactUs() {
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent"
                 />
               </div>
-
+  
               <div>
                 <label className="block text-sm font-medium text-accent mb-2">Message</label>
                 <textarea
@@ -136,17 +132,17 @@ export default function ContactUs() {
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent"
                 ></textarea>
               </div>
-
+  
               <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full bg-primary text-white px-6 py-3 rounded-lg flex items-center justify-center space-x-2 hover:bg-primary-dark transition-colors">
                 <span>Send Message</span>
                 <Send className="w-5 h-5" />
               </motion.button>
             </form>
-
+  
             {status && <p className="text-center text-sm mt-4 text-primary">{status}</p>}
           </motion.div>
         </div>
-
+  
         {/* Google Map Section */}
         <div className="mt-16">
           <iframe
@@ -159,10 +155,10 @@ export default function ContactUs() {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3474.675464937428!2d-98.41488142501294!3d29.438280247036932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865cf5d96d5527af%3A0xc47e601111546726!2sUnBox%20Liquidation%20San%20Antonio%20TX!5e0!3m2!1sen!2s!4v1741280934361!5m2!1sen!2s"
           ></iframe>
 
-
+          
         </div>
       </div>
     </section>
   );
-
+  
 }
